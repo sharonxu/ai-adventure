@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Two Player Text Game</title>
+    <style>
+        #gameArea {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            height: 300px;
+            overflow-y: scroll;
+        }
+        #chatArea {
+            margin: 20px;
+            padding: 10px;
+            border: 1px solid #ccc;
+            height: 150px;
+            overflow-y: scroll;
+        }
+    </style>
+</head>
+<body>
+    <h1>Two Player Text Game</h1>
+    <div id="playerInfo">
+        <button id="createGame">Create New Game</button>
+        <div id="gameLink" style="display: none;">
+            Share this link with player 2: <span id="linkText"></span>
+        </div>
+    </div>
+    
+    <div id="gameArea"></div>
+    
+    <div id="chatArea"></div>
+    
+    <input type="text" id="messageInput" placeholder="Type your message...">
+    <button onclick="sendMessage()">Send</button>
+
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.10.0/firebase-database.js"></script>
+    <script src="game.js"></script>
+</body>
+</html> 
